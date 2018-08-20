@@ -12,6 +12,7 @@
     "dotenv": "^6.0.0",
     "geocoder": "^0.2.3",
     "inquirer": "^6.1.0",
+    "moment": "^2.22.2",
     "node-spotify-api": "^1.0.7",
     "weather-js": "^2.0.0",
     "xhr2": "^0.1.4"
