@@ -141,13 +141,3 @@ function doThis() {
 // spotify-this-song
 // movie-this
 // do-what-it-says
-
-// var dataB = [{"offers":[{"type":"Tickets","url":"https:\/\/www.bandsintown.com\/t\/1008455137?app_id=[object Object]&came_from=267","status":"available"}],"venue":{"name":"Talking Stick Resort Arena","country":"United States","region":"AZ","city":"Phoenix","latitude":"33.4457369","longitude":"-112.0712006"},"datetime":"2018-09-08T20:00:00","on_sale_datetime":"2018-01-09T16:55:00","description":"","lineup":["Eagles"],"id":"1008455137","artist_id":"26649","url":"https:\/\/www.bandsintown.com\/e\/1008455137?app_id=[object Object]&came_from=267"},{"offers":[{"type":"Tickets","url":"https:\/\/www.bandsintown.com\/t\/1008455002?app_id=[object Object]&came_from=267","status":"available"}],"venue":{"name":"AT&T Park","country":"United States","region":"CA","city":"San Francisco","latitude":"37.7783889","longitude":"-122.3911567"},"datetime":"2018-09-20T17:00:00","on_sale_datetime":"2018-01-19T18:00:00","description":"Event takes place 'Rain or Shine'","lineup":["Eagles","Zac Brown Band"],"id":"1008455002","artist_id":"26649","url":"https:\/\/www.bandsintown.com\/e\/1008455002?app_id=[object Object]&came_from=267"},{"offers":[{"type":"Tickets","url":"https:\/\/www.bandsintown.com\/t\/1008454804?app_id=[object Object]&came_from=267","status":"available"}],"venue":{"name":"Petco Park","country":"United States","region":"CA","city":"San Diego","latitude":"32.70586","longitude":"-117.157008"},"datetime":"2018-09-22T17:00:00","on_sale_datetime":"2018-01-16T17:55:00","description":"Doors open at 3PM. Event starts at 5PM sharp.","lineup":["Eagles","Zac Brown Band"],"id":"1008454804","artist_id":"26649","url":"https:\/\/www.bandsintown.com\/e\/1008454804?app_id=[object Object]&came_from=267"}]
-
-// var dataK = JSON.stringify(dataB, null, ' ');
-
-// var dataB = JSON.parse(dataK);
-
-//   console.log(dataB[0].venue.name);
-// console.log(dataB[0].venue.city + ", " + dataB[0].venue.region)
-//   console.log(dataB[0].datetime)
