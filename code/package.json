@@ -10,6 +10,7 @@
   "dependencies": {
     "bandsintown-events": "^1.0.4",
     "dotenv": "^6.0.0",
+    "fs": "0.0.1-security",
     "geocoder": "^0.2.3",
     "inquirer": "^6.1.0",
     "moment": "^2.22.2",

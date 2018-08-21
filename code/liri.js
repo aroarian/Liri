@@ -4,6 +4,7 @@ var request = require("request");
 var Spotify = require("node-spotify-api");
 var Bands = require("bandsintown-events");
 var moment = require("moment");
+var fs = require("fs");
 
 var spotify = new Spotify(keys.spotify);
 var bands = new Bands(keys.bandsIn);
@@ -38,20 +39,17 @@ function concertThis(artist) {
     artist = "Eagles";
   }
 
-  request(
-    `https://rest.bandsintown.com/artists/${artist}/events?app_id=${bands}`,
+  request(`https://rest.bandsintown.com/artists/${artist}/events?app_id=${bands}`,
     function(error, response, events) {
       if (error) {
         return console.log("Error occurred: " + error);
       }
-
-      var eventsData = JSON.stringify(events, null, " ");
-
-      var eventsParse = JSON.parse(eventsData);
-
-      var data = JSON.parse(eventsParse);
-        console.log("");
-        console.log(artist + " Events:")
+      
+      var data = JSON.parse(events);
+      
+      console.log("");
+      console.log(artist + " Events:")
+     
       for (var i = 0; i < data.length; i++) {
         console.log("--------------------------------");
         console.log("");
@@ -80,7 +78,7 @@ function spotifyThis(query) {
       return console.log("Error occurred: " + err);
     }
 
-    //console.log(data.tracks.items[0]);
+    console.log("");
     console.log("--------------------------------");
     console.log("");
     console.log(data.tracks.items[0].artists[0].name);
@@ -102,15 +100,12 @@ function movieThis(movie) {
     movie = "Mr. Nobody";
   }
 
-  request(`http://www.omdbapi.com/?apikey=c5a8df09&t=${movie}`, function(
-    error,
-    response,
-    data
-  ) {
+  request(`http://www.omdbapi.com/?apikey=c5a8df09&t=${movie}`, function(error, response, data) {
     if (error) {
       return console.log("Error occurred: " + error);
     }
 
+    console.log("");
     console.log("--------------------------------");
     console.log("");
     console.log(JSON.parse(data).Title);
@@ -134,7 +129,36 @@ function movieThis(movie) {
 }
 
 function doThis() {
-  console.log("do what is working");
+  fs.readFile('random.txt', 'utf8', (err, data) => {
+    if (err) throw err;
+
+    var dataArr = data.split(",");
+    var doCommand = dataArr[0].trim();
+    var doInput = dataArr[1].trim();
+     
+    //console.log(doCommand);
+    //console.log(doInput);
+    
+    if (doCommand === "concert-this") {
+      concertThis(doInput);
+    } 
+    
+    else if (doCommand === "spotify-this-song") {
+      spotifyThis(doInput);
+    } 
+    
+    else if (doCommand === "movie-this") {
+       movieThis(doInput);
+    } 
+    
+    else if (doCommand === "do-what-it-says") {
+      console.log("Please select another command");
+    }
+    else {
+      console.log("command unknown");
+    }
+       
+   });
 }
 
 // concert-this
