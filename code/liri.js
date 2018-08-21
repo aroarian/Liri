@@ -47,8 +47,12 @@ function concertThis(artist) {
       
       var data = JSON.parse(events);
       
-      console.log("");
-      console.log(artist + " Events:")
+     //console.log(artist);
+     //console.log(typeof(artist));
+      //console.log(data);
+      
+      //console.log("");
+      //console.log(artist + " Events:")
      
       for (var i = 0; i < data.length; i++) {
         console.log("--------------------------------");
@@ -135,12 +139,16 @@ function doThis() {
     var dataArr = data.split(",");
     var doCommand = dataArr[0].trim();
     var doInput = dataArr[1].trim();
+
+    //console.log(typeof(doInput));
+    
      
     //console.log(doCommand);
     //console.log(doInput);
     
     if (doCommand === "concert-this") {
-      concertThis(doInput);
+      var doStrip = doInput.replace(/^"(.*)"$/, '$1');
+      concertThis(doStrip);
     } 
     
     else if (doCommand === "spotify-this-song") {
