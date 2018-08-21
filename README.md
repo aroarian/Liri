@@ -24,7 +24,7 @@ npm install fs
 
 Get events from a Band
 
-node liri concert=this "Example Band"
+node liri concert-this "Example Band"
 
 Get a song's information from Spotify
 
