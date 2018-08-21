@@ -4,19 +4,19 @@ LIRI is a Language Interpretation and Recognition Interface. Use LIRI to get you
 # Installs
 The package.json lists dependent node packages. I have also listed the required npm installs and commands below.
 
-BandsinTown
+BandsinTown:
 npm install bandsintown-events
 
-Spotify
+Spotify:
 npm install node-spotify-api
 
-Moment.js
+Moment.js:
 npm install moment
 
-Request
+Request:
 npm install request
 
-FS
+FS:
 npm install fs
 
 
