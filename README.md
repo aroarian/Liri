@@ -2,7 +2,7 @@
 LIRI is a Language Interpretation and Recognition Interface. Use LIRI to get your latest tweets, find out about a song, or a movie, or just choose a random action from your own random file.
 
 # Installs
-The package.json lists dependent node packages, but for your convenvice, these are the ones to install.
+The package.json lists dependent node packages. I have also listed the required npm installs and commands below.
 
 BandsinTown
 npm install bandsintown-events
